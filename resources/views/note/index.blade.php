@@ -24,4 +24,6 @@
             {{ $notes->links() }}
         </div>
     </div>
+
+
 </x-app-layout>

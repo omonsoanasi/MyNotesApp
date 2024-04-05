@@ -1,8 +1,12 @@
 <?php
 
 use App\Http\Controllers\NoteController;
+use App\Http\Controllers\PermissionController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
+
+
+Route::resource('permission', PermissionController::class);
 
 Route::redirect('/', '/note')->name('dashboard');
 
