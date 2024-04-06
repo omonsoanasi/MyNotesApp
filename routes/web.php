@@ -3,10 +3,14 @@
 use App\Http\Controllers\NoteController;
 use App\Http\Controllers\PermissionController;
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\RoleController;
 use Illuminate\Support\Facades\Route;
 
 
 Route::resource('permission', PermissionController::class);
+Route::resource('role', RoleController::class);
+Route::get('/role/{role}/add-permissions', [RoleController::class, 'addPermission'])->name('role.add-permissions');
+Route::put('role/{role}/give-permissions', [RoleController::class, 'givePermission'])->name('role.give-permissions');
 
 Route::redirect('/', '/note')->name('dashboard');
 
