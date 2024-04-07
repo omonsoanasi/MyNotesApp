@@ -36,6 +36,13 @@
                 @endsession
                 {{ $slot }}
             </main>
+            <script>
+                function confirmDelete() {
+                    if (confirm('Are you sure you want to delet asalkse this user?')) {
+                        document.getElementById('deleteForm').submit();
+                    }
+                }
+            </script>
         </div>
     </body>
 </html>
